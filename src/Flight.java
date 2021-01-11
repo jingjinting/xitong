@@ -1,9 +1,18 @@
 public class Flight {
 
     private String id;
-    private String planeType;
-    private String departureAirPort;
-    private String departureTime;
+    private String planeType;//飞机型号
+    private String departureAirPort;//出发机场
+    private String departureTime;//到达机场
+    private String departrueDate;//出发时间
+
+    public String getDepartrueDate() {
+        return departrueDate;
+    }
+
+    public void setDepartrueDate(String departrueDate) {
+        this.departrueDate = departrueDate;
+    }
 
     public String getId() {
         return id;
