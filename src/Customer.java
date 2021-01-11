@@ -1,9 +1,30 @@
+import java.util.Date;
+
 public class Customer {
 
     private String id;
+    private String customerType;
     private String name;
     private String phone;
     private String cardId;
+
+    public String getCustomerType() {
+        return customerType;
+    }
+
+    public void setCustomerType(String customerType) {
+        this.customerType = customerType;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    private Date birthDate;
     public String getId() {
         return id;
     }
