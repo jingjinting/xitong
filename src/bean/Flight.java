@@ -1,41 +1,20 @@
 package bean;
 
 public class Flight {
-
-    public Flight(String s,  String planeType, int currentSeatsNum, String departureAirPort, String departureTime, String departrueDate) {
-
-        this.planeType = planeType;
-        this.currentSeatsNum = currentSeatsNum;
-        this.departureAirPort = departureAirPort;
-        this.departureTime = departureTime;
-        this.departrueDate = departrueDate;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Flight{" +
-                "planeType='" + planeType + '\'' +
-                ", currentSeatsNum=" + currentSeatsNum +
-                ", departureAirPort='" + departureAirPort + '\'' +
-                ", departureTime='" + departureTime + '\'' +
-                ", departrueDate='" + departrueDate + '\'' +
-                '}';
-    }
-
     private String id;
     private String planeType;//飞机型号
+    private String flightId;
     private int currentSeatsNum;//空座位数量
     private String departureAirPort;//出发机场
-    private String departureTime;//到达机场
-    private String departrueDate;//出发时间
+    private String destinationAirPort;//到达机场
+    private String departrueTime;//出发时间
 
-    public String getDepartrueDate() {
-        return departrueDate;
+    public String getDepartrueTime() {
+        return departrueTime;
     }
 
-    public void setDepartrueDate(String departrueDate) {
-        this.departrueDate = departrueDate;
+    public void setDepartrueTime(String departrueTime) {
+        this.departrueTime = departrueTime;
     }
 
     public String getId() {
@@ -70,12 +49,42 @@ public class Flight {
         this.departureAirPort = departureAirPort;
     }
 
-    public String getDepartureTime() {
-        return departureTime;
+    public String getDestinationAirPort() {
+        return destinationAirPort;
     }
 
-    public void setDepartureTime(String departureTime) {
-        this.departureTime = departureTime;
+    public void setDestinationAirPort(String destinationAirPort) {
+        this.destinationAirPort = destinationAirPort;
     }
 
+    public String getFlightId() {
+        return flightId;
+    }
+
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
+    }
+
+    public Flight(String id, String planeType, String flightId, int currentSeatsNum, String departureAirPort, String destinationAirPort, String departrueTime) {
+        this.id = id;
+        this.planeType = planeType;
+        this.flightId = flightId;
+        this.currentSeatsNum = currentSeatsNum;
+        this.departureAirPort = departureAirPort;
+        this.destinationAirPort = destinationAirPort;
+        this.departrueTime = departrueTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "id='" + id + '\'' +
+                ", planeType='" + planeType + '\'' +
+                ", flightId='" + flightId + '\'' +
+                ", currentSeatsNum=" + currentSeatsNum +
+                ", departureAirPort='" + departureAirPort + '\'' +
+                ", destinationAirPort='" + destinationAirPort + '\'' +
+                ", departrueTime='" + departrueTime + '\'' +
+                '}';
+    }
 }
