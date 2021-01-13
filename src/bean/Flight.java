@@ -7,14 +7,14 @@ public class Flight {
     private int currentSeatsNum;//空座位数量
     private String departureAirPort;//出发机场
     private String destinationAirPort;//到达机场
-    private String departrueTime;//出发时间
+    private String departureTime;//出发时间
 
-    public String getDepartrueTime() {
-        return departrueTime;
+    public String getDepartureTime() {
+        return departureTime;
     }
 
-    public void setDepartrueTime(String departrueTime) {
-        this.departrueTime = departrueTime;
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
     }
 
     public String getId() {
@@ -65,26 +65,25 @@ public class Flight {
         this.flightId = flightId;
     }
 
-    public Flight(String id, String planeType, String flightId, int currentSeatsNum, String departureAirPort, String destinationAirPort, String departrueTime) {
+    public Flight(String id, String planeType, String flightId, int currentSeatsNum, String departureAirPort, String destinationAirPort, String departureTime) {
         this.id = id;
         this.planeType = planeType;
         this.flightId = flightId;
         this.currentSeatsNum = currentSeatsNum;
         this.departureAirPort = departureAirPort;
         this.destinationAirPort = destinationAirPort;
-        this.departrueTime = departrueTime;
+        this.departureTime = departureTime;
     }
 
     @Override
     public String toString() {
         return "Flight{" +
-                "id='" + id + '\'' +
-                ", planeType='" + planeType + '\'' +
-                ", flightId='" + flightId + '\'' +
-                ", currentSeatsNum=" + currentSeatsNum +
-                ", departureAirPort='" + departureAirPort + '\'' +
-                ", destinationAirPort='" + destinationAirPort + '\'' +
-                ", departrueTime='" + departrueTime + '\'' +
+                ", 航班ID='" + flightId + '\'' +
+                ", 机型='" + planeType + '\'' +
+                ", 座位数=" + currentSeatsNum +
+                ", 起飞机场='" + departureAirPort + '\'' +
+                ", 目的机场='" + destinationAirPort + '\'' +
+                ", 起飞时间='" + departureTime + '\'' +
                 '}';
     }
 }
